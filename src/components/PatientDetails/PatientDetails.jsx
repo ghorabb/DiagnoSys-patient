@@ -120,7 +120,7 @@ export default function PatientDetails() {
             </div>
 
             {/* Patient Stats */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-3 mt-4">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 mt-4">
               {/* DOB */}
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-2 sm:p-3 text-center">
                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 mx-auto mb-1" />
@@ -142,17 +142,16 @@ export default function PatientDetails() {
                   {patient.age} yrs
                 </p>
               </div>
-
-              {/* Blood Type */}
-              <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-2 sm:p-3 text-center">
-                <Droplet className="w-4 h-4 sm:w-5 sm:h-5 text-red-600 mx-auto mb-1" />
-                <p className="text-xs text-red-600 font-semibold uppercase tracking-wide">
-                  Blood Type
-                </p>
-                <p className="text-xs sm:text-sm font-bold text-slate-700">
-                  {patient.bloodType || "N/A"}
-                </p>
-              </div>
+            </div>
+            {/* Blood Type */}
+            <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-lg p-2 sm:p-3 text-center mt-2">
+              <Droplet className="w-4 h-4 sm:w-5 sm:h-5 text-red-600 mx-auto mb-1" />
+              <p className="text-xs text-red-600 font-semibold uppercase tracking-wide">
+                Blood Type
+              </p>
+              <p className="text-xs sm:text-sm font-bold text-slate-700">
+                {patient.bloodType || "N/A"}
+              </p>
             </div>
           </div>
 
